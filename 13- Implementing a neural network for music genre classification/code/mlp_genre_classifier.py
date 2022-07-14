@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow.keras as keras
 
 # path to json file that stores MFCCs and genre labels for each processed segment
-DATA_PATH = "path/to/dataset/in/json/file"
+DATA_PATH = "data_7.json"
 
 def load_data(data_path):
     """Loads training dataset from json file.
@@ -50,7 +50,7 @@ if __name__ == "__main__":
         keras.layers.Dense(64, activation='relu'),
 
         # output layer
-        keras.layers.Dense(10, activation='softmax')
+        keras.layers.Dense(7, activation='softmax')
     ])
 
     # compile model
