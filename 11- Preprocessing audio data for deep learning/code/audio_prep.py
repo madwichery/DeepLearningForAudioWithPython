@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 FIG_SIZE = (15,10)
 
-file = "blues.00000.wav"
+file = "11- Preprocessing audio data for deep learning/code/blues.00000.wav"
 
 # load audio file with Librosa
 signal, sample_rate = librosa.load(file, sr=22050)
@@ -12,7 +12,7 @@ signal, sample_rate = librosa.load(file, sr=22050)
 # WAVEFORM
 # display waveform
 plt.figure(figsize=FIG_SIZE)
-librosa.display.waveplot(signal, sample_rate, alpha=0.4)
+librosa.display.waveshow(signal, sample_rate, alpha=0.4)
 plt.xlabel("Time (s)")
 plt.ylabel("Amplitude")
 plt.title("Waveform")
