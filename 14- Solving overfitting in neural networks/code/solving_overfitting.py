@@ -5,7 +5,7 @@ import tensorflow.keras as keras
 import matplotlib.pyplot as plt
 
 # path to json file that stores MFCCs and genre labels for each processed segment
-DATA_PATH = "path/to/dataset"
+DATA_PATH = "data_7.json"
 
 def load_data(data_path):
     """Loads training dataset from json file.
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         keras.layers.Dropout(0.3),
 
         # output layer
-        keras.layers.Dense(10, activation='softmax')
+        keras.layers.Dense(7, activation='softmax')
     ])
 
     # compile model

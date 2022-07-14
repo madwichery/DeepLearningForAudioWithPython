@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow.keras as keras
 import matplotlib.pyplot as plt
 
-DATA_PATH = "../13/data_10.json"
+DATA_PATH = "data_7.json"
 
 
 def load_data(data_path):
@@ -110,7 +110,7 @@ def build_model(input_shape):
     model.add(keras.layers.Dropout(0.3))
 
     # output layer
-    model.add(keras.layers.Dense(10, activation='softmax'))
+    model.add(keras.layers.Dense(7, activation='softmax'))
 
     return model
 
@@ -163,8 +163,8 @@ if __name__ == "__main__":
     print('\nTest accuracy:', test_acc)
 
     # pick a sample to predict from the test set
-    X_to_predict = X_test[100]
-    y_to_predict = y_test[100]
+    X_to_predict = X_test[3]
+    y_to_predict = y_test[4]
 
     # predict sample
     predict(model, X_to_predict, y_to_predict)
